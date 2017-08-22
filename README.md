@@ -1,7 +1,9 @@
 # discordCrypto
 discord with encryption, really simple!
-By:
-FireC, Cth103
+
+By: FireC and Cth103
+
+![Demo](http://i.imgur.com/AKflgLt.gif)
 
 # Donate
 If you like this project and would like to donate to support us! 
