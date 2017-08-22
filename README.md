@@ -6,8 +6,7 @@ FireC, Cth103
 # Donate
 If you like this project and would like to donate to support us! 
 
-![](https://s3-us-west-2.amazonaws.com/lglformsimg/z99mhB8DINA/bitcoin-button.png-bitcoin-button.png)(bitcoin:3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL?amount=0.01&label=Donation&message=Here,%20a%20donation) 
-
+[Bitcoin](bitcoin:3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL?amount=0.01&label=Donation&message=Here,%20a%20donation) 
 
 Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL 
 
