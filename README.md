@@ -1,4 +1,4 @@
-# discordCrypto
+![Logo](http://i.imgur.com/1n12yaE.png)
 discord with encryption, really simple!
 
 By: FireC and Cth103
