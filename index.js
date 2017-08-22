@@ -15,15 +15,10 @@ colors.setTheme({
     error: "red"
 });
 var client = new Discordie();
-console.log("      _ _                       _  _____                  _        ");
-console.log("     | (_)                     | |/ ____|                | |       ");
-console.log("   __| |_ ___  ___ ___  _ __ __| | |     _ __ _   _ _ __ | |_ ___  ");
-console.log("  / _` | / __|/ __/ _ \| '__/ _` | |    | '__| | | | '_ \| __/ _ \ ");
-console.log(" | (_| | \__ \ (_| (_) | | | (_| | |____| |  | |_| | |_) | || (_) |");
-console.log("  \__,_|_|___/\___\___/|_|  \__,_|\_____|_|   \__, | .__/ \__\___/ ");
-console.log("                                               __/ | |             ");
-console.log("                                              |___/|_|             ");
-console.log("                     by FireC and cth103                           ");
+
+console.log("Discord Crypto");
+console.log("by FireC and cth103");
+console.log("If you like this project and would like to donate\n"+colors.yellow("Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL\nDogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn"));
 var yourid = "Your id goes here";
 var token = "Token goes here";
 var personid = "Id of your friend goes here";
