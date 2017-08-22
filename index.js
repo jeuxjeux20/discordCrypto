@@ -26,29 +26,21 @@ var token = "Token goes here";
 var personid = "Id of your friend goes here";
 var encryptionKey = "Encryption key (the person that you will use this with has to use the same encryption key as you)";
 console.log("All the data is sent to discord's servers, you're safe.");
-rl = readline.createInterface(process.stdin, process.stdout);
-rl.question("Enter your id. (NOT USERNAME#0000) ", function(theid) {
-  yourid = theid;
-  rl.close();
-  process.stdin.destroy();
+console.log("Enter your id. (NOT USERNAME#0000) ")
+stdin.addListener("data", function (d) {
+       yourid = d.toString().trim();
 });
-rl = readline.createInterface(process.stdin, process.stdout);
-rl.question("Enter your token. ", function(ftok) {
-  token = ftok;
-  rl.close();
-  process.stdin.destroy();
+console.log("Enter your token. ")
+stdin.addListener("data", function (d) {
+       token = d.toString().trim();
 });
-rl = readline.createInterface(process.stdin, process.stdout);
-rl.question("Enter the person's id. (NOT USERNAME#0000) ", function(azze) {
-  personid = azze;
-  rl.close();
-  process.stdin.destroy();
+console.log("Enter the person's id. (NOT USERNAME#0000) ")
+stdin.addListener("data", function (d) {
+       personid = d.toString().trim();
 });
-rl = readline.createInterface(process.stdin, process.stdout);
-rl.question("Enter the encryption key (both persons uses the same encryption key) ", function(lala) {
-  encryptionKey = lala;
-  rl.close();
-  process.stdin.destroy();
+console.log("Enter the encryption key (both persons uses the same encryption key) ")
+stdin.addListener("data", function (d) {
+       encryptionKey = d.toString().trim();
 });
 console.log("Connecting...");
 client.connect({ //connect
