@@ -51,13 +51,19 @@ try {
         console.log("Taking you to the other line");
     });
     client.Dispatcher.on("MESSAGE_CREATE", e => {
+        
         if (e.message.author.id == personid || e.message.author.id == yourid) {
-
             if (e.message.content.startsWith("discCrypto: ")) {
+                
                 var bytes = CryptoJS.AES.decrypt(e.message.content.slice(12).toString(), encryptionKey);
                 var plaintext = bytes.toString(CryptoJS.enc.Utf8);
                 console.log(colors.green("<") + colors.green(e.message.author.username) + colors.green("> ") + colors.cyan(plaintext) + colors.magenta(
                     " (DECRYPTED)"));
+                    fs.writeFile('log_'+personid+"_"+yourid+".txt", "\n<" + e.message.author.username) "> " + plaintext + " (DECRYPTED)", function(err) {
+                    if(err) {
+                        return console.log(err);
+                    }
+                }
             } else {
                 console.log(colors.green(e.message.author.username) + colors.yellow(": ") + colors.cyan(e.message.content));
             }
