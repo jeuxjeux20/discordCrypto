@@ -42,13 +42,13 @@ client.connect({ //connect
     token: token
 });
 client.Dispatcher.on("GATEWAY_READY", a => {
-    console.log("Hello, " + client.User.username + " to the world of CRYPTED MESSAGING!");
+    console.log("Hello, " + colors.green(client.User.username) + "and welcome to the world of "+colors.red("CRYPTED MESSAGING!"));
     console.log("Taking you to the other line");
 });
 try {
     client.Dispatcher.on("MESSAGE_CREATE", e => {
         if (e.message.author.id == personid || e.message.author.id == yourid) {
-            console.log(colors.green("<"+e.message.author.username+">")+ colors.cyan(e.message.content));
+            console.log(colors.green("<"+e.message.author.username+"> ")+ colors.cyan(e.message.content));
 
             if (e.message.content.startsWith("discCrypto: ")) {
                 var bytes = CryptoJS.AES.decrypt(e.message.content.slice(12).toString(), encryptionKey);
