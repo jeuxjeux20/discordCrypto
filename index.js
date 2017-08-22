@@ -1,6 +1,4 @@
 var stdin = process.openStdin();
-var readline = require('readline');
-var rl = readline.createInterface(process.stdin, process.stdout);
 var Discordie = require("discordie");
 var colors = require("colors/safe");
 var CryptoJS = require("crypto-js");
