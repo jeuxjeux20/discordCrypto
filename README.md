@@ -11,7 +11,6 @@ If you like this project and would like to donate to support us!
 Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL 
 
 Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
-http://i.imgur.com/0UES3XC.png
 
 # Installation
 ![Download](http://i.imgur.com/btDHHM8.gif) 
