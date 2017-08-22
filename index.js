@@ -42,5 +42,5 @@ try {
     });
 
 } catch (err) {
-    console.log("Error: \n" + err);
+    console.log(color.red("Error: \n" + err));
 }
