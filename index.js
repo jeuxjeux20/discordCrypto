@@ -13,7 +13,7 @@ var client = new Discordie();
 var yourid = "Your id goes here";
 var token = "Token goes here";
 var personid = "Id of your friend goes here";
-var encryptionKey = "jiksec";
+var encryptionKey = "Encryption key (the person that you will use this with has to use the same encryption key as you)";
 console.log("Connecting...");
 client.connect({ //connect
     token: token
