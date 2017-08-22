@@ -16,10 +16,11 @@ Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
 Python 2.7
 MS VS C++ Express Version (Compiler update for Windows SDK 7.1)
 
-
 # Installation
+
 ![Download](http://i.imgur.com/btDHHM8.gif) 
 1. Download the repository by using a command line interface or directly 
+2. type 'npm install --global --production windows-build-tools' to install windows build tools.
 
 ![Run](http://i.imgur.com/0UES3XC.png)
 
