@@ -14,7 +14,8 @@ Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
 
 # Requirements
 Python 2.7
-Visual C++
+MS VS C++ Express Version (Compiler update for Windows SDK 7.1)
+
 
 # Installation
 ![Download](http://i.imgur.com/btDHHM8.gif) 
