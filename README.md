@@ -19,12 +19,14 @@ MS VS C++ Express Version (Compiler update for Windows SDK 7.1)
 # Installation
 
 ![Download](http://i.imgur.com/btDHHM8.gif) 
-1. Download the repository by using a command line interface or directly 
-2. type 'npm install --global --production windows-build-tools' to install windows build tools.
-
 ![Run](http://i.imgur.com/0UES3XC.png)
+1. Download the repository by using a command line interface or directly 
 
-2. type 'npm i' to install all the modules 
+2. type 'npm install --global --production windows-build-tools' to install windows build tools, then install python and type 'npm config set python python2.7'
+
+3. Thinking that you have VS 2015, Type npm config set msvs_version 2015
+
+4. type 'npm i' to install all the modules 
 
 ![npm i](http://i.imgur.com/1QztdnP.png)
 
