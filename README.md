@@ -12,6 +12,10 @@ Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL
 
 Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
 
+# Requirements
+Python 2.7
+Visual C++
+
 # Installation
 ![Download](http://i.imgur.com/btDHHM8.gif) 
 1. Download the repository by using a command line interface or directly 
