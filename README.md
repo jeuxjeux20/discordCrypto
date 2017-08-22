@@ -3,6 +3,13 @@ discord with encryption, really simple!
 By:
 FireC, Cth103
 
+# Donate
+If you like this project and would like to donate
+Bitcoin adress:
+3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL
+Dogecoin adress:
+ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
+
 # How to grab discord id's
 1. Open user settings and open the appearnce submenu as shown below
 2. Enable developer mode as shown below
