@@ -18,44 +18,42 @@ var client = new Discordie();
 
 console.log("Discord Crypto");
 console.log("by FireC and cth103");
-console.log("If you like this project and would like to donate\n"+colors.yellow("Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL\nDogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn"));
+console.log("If you like this project and would like to donate\n" + colors.yellow(
+    "Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL\nDogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn"));
 var yourid = "Your id goes here";
 var token = "Token goes here";
 var personid = "Id of your friend goes here";
 var encryptionKey = "Encryption key (the person that you will use this with has to use the same encryption key as you)";
-console.log("Getting settings.ini");
+console.log("\nGetting settings.ini");
 try {
-config = ini.parse(fs.readFileSync('./settings.ini', 'utf-8'))
-encryptionKey = config.crypt.key;
-personid = config.client.destid;
-token = config.client.token;
-yourid = config.client.myid;
-console.log("key: "+encryptionKey);
-console.log("person id: "+personid);
-console.log("token: "+token);
-console.log("your id: "+yourid);
-console.log("Connecting...");
-client.connect({ //connect
-    token: token
-});
-client.Dispatcher.on("GATEWAY_READY", a => {
-    console.log("Hello, " + client.User.username + " to the world of CRYPTED MESSAGING!");
-    console.log("Taking you to the other line");
-});
-   client.Dispatcher.on("MESSAGE_CREATE", e => {
+    config = ini.parse(fs.readFileSync('./settings.ini', 'utf-8'))
+    encryptionKey = config.crypt.key;
+    personid = config.client.destid;
+    token = config.client.token;
+    yourid = config.client.myid;
+    console.log("Connecting...");
+    client.connect({ //connect
+        token: token
+    });
+    client.Dispatcher.on("GATEWAY_READY", a => {
+        console.log("Hello, " + client.User.username + " to the world of CRYPTED MESSAGING!");
+        console.log("Taking you to the other line");
+    });
+    client.Dispatcher.on("MESSAGE_CREATE", e => {
         if (e.message.author.id == personid || e.message.author.id == yourid) {
 
             if (e.message.content.startsWith("discCrypto: ")) {
                 var bytes = CryptoJS.AES.decrypt(e.message.content.slice(12).toString(), encryptionKey);
                 var plaintext = bytes.toString(CryptoJS.enc.Utf8);
-                console.log(colors.green( "<") + colors.green(e.message.author.username) + colors.green("> ") + colors.cyan(plaintext));
-            } else  {            
-			    console.log(colors.green(e.message.author.username) + colors.yellow(": ") + colors.cyan(e.message.content));
+                console.log(colors.green("<") + colors.green(e.message.author.username) + colors.green("> ") + colors.cyan(plaintext) + colors.magenta(
+                    " (ENCRYPTED)"));
+            } else {
+                console.log(colors.green(e.message.author.username) + colors.yellow(": ") + colors.cyan(e.message.content));
             }
         }
     });
     stdin.addListener("data", function (d) {
-		
+
         var ididid = client.Users.find(fn => fn.id == personid).openDM().then(function (ledm) {
             ledm.sendMessage("discCrypto: " + CryptoJS.AES.encrypt(d.toString().trim(), encryptionKey))
         });
