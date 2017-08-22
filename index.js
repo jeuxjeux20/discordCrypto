@@ -4,8 +4,14 @@ var colors = require("colors/safe");
 var CryptoJS = require("crypto-js");
 var fs = require('fs')
 var ini = require('ini')
-var sleep = require('sleep');
-//lol i needed a module for that
+//this solution is terrible but whatever.
+function sleep(millis)
+{
+    var date = new Date();
+    var curDate = null;
+    do { curDate = new Date(); }
+    while(curDate-date < millis);
+}
 var config;
 
 colors.setTheme({
@@ -24,7 +30,7 @@ console.log("If you like this project and would like to donate\n Here, " + color
     "Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL\nOr Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn"));
 console.log("Even a penny could help!");
 console.log("Anyways, starting the program, sorry for interrupting.");
-sleep.sleep(3);
+sleep(2000);
 var yourid = "Your id goes here";
 var token = "Token goes here";
 var personid = "Id of your friend goes here";
