@@ -4,13 +4,16 @@ By:
 FireC, Cth103
 
 # Donate
-If you like this project and would like to donate
+If you like this project and would like to donate to support us! 
 
-Bitcoin adress:
-3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL
+[![](http://Kristinita.ru/Donate-files/Bitcoin-Donate-button.png)](bitcoin:3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL?amount=0.01&label=Donation&message=Here,%20a%20donation) 
 
-Dogecoin adress:
-ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
+
+Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL 
+
+[Dogecoin](dogecoin:ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn?amount=1000.00&label=Donation&message=Here,%20a%20donation)
+
+Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
 
 # How to grab discord id's
 1. Open user settings and open the appearnce submenu as shown below
@@ -18,7 +21,7 @@ ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
 3. Right click on any user and click "Copy ID" as shown below
 The id of the user is now in your clipboard
 
-![Alt Text](http://i.imgur.com/f5Tyqt9.gif)
+![How to?](http://i.imgur.com/f5Tyqt9.gif)
 
 # Installation
 1. Download the repository by using a command line interface or directly
