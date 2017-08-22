@@ -1,4 +1,6 @@
 var stdin = process.openStdin();
+var readline = require('readline');
+var rl = readline.createInterface(process.stdin, process.stdout);
 var Discordie = require("discordie");
 var colors = require("colors/safe");
 var CryptoJS = require("crypto-js");
@@ -10,16 +12,56 @@ colors.setTheme({
     error: "red"
 });
 var client = new Discordie();
+console.log("      _ _                       _  _____                  _        ");
+console.log("     | (_)                     | |/ ____|                | |       ");
+console.log("   __| |_ ___  ___ ___  _ __ __| | |     _ __ _   _ _ __ | |_ ___  ");
+console.log("  / _` | / __|/ __/ _ \| '__/ _` | |    | '__| | | | '_ \| __/ _ \ ");
+console.log(" | (_| | \__ \ (_| (_) | | | (_| | |____| |  | |_| | |_) | || (_) |");
+console.log("  \__,_|_|___/\___\___/|_|  \__,_|\_____|_|   \__, | .__/ \__\___/ ");
+console.log("                                               __/ | |             ");
+console.log("                                              |___/|_|             ");
+console.log("                     by FireC and cth103                           ");
 var yourid = "Your id goes here";
 var token = "Token goes here";
 var personid = "Id of your friend goes here";
 var encryptionKey = "Encryption key (the person that you will use this with has to use the same encryption key as you)";
+console.log("All the data is sent to discord's servers, you're safe.");
+rl = readline.createInterface(process.stdin, process.stdout);
+rl.question("Enter your id. (NOT USERNAME#0000) ", function(theid) {
+  yourid = theid;
+  rl.close();
+  process.stdin.destroy();
+});
+rl = readline.createInterface(process.stdin, process.stdout);
+rl.question("Enter your token. ", function(ftok) {
+  token = ftok;
+  rl.close();
+  process.stdin.destroy();
+});
+rl = readline.createInterface(process.stdin, process.stdout);
+rl.question("Enter the person's id. (NOT USERNAME#0000) ", function(azze) {
+  personid = azze;
+  rl.close();
+  process.stdin.destroy();
+});
+rl = readline.createInterface(process.stdin, process.stdout);
+rl.question("Enter the person's id. (NOT USERNAME#0000) ", function(azze) {
+  personid = azze;
+  rl.close();
+  process.stdin.destroy();
+});
+rl = readline.createInterface(process.stdin, process.stdout);
+rl.question("Enter the encryption key (both persons uses the same encryption key) ", function(lala) {
+  encryptionKey = lala;
+  rl.close();
+  process.stdin.destroy();
+});
 console.log("Connecting...");
 client.connect({ //connect
     token: token
 });
 client.Dispatcher.on("GATEWAY_READY", a => {
-    console.log("Connected as: " + client.User.username);
+    console.log("Hello, " + client.User.username + " to the world of CRYPTED MESSAGING!");
 });
 try {
     client.Dispatcher.on("MESSAGE_CREATE", e => {
@@ -29,12 +71,10 @@ try {
             if (e.message.content.startsWith("discCrypto: ")) {
                 var bytes = CryptoJS.AES.decrypt(e.message.content.slice(12).toString(), encryptionKey);
                 var plaintext = bytes.toString(CryptoJS.enc.Utf8);
-                console.log(colors.green(e.message.author.username) + colors.yellow(": ") + colors.cyan(plaintext) + colors.magenta(" (DECRYPTED)"));
+                console.log(colors.green( "<") + colors.green(e.message.author.username) + colors.green("> ") + colors.cyan(plaintext));
             }
         }
     });
-
-    //start a user input listner
     stdin.addListener("data", function (d) {
         var ididid = client.Users.find(fn => fn.id == personid).openDM().then(function (ledm) {
             ledm.sendMessage("discCrypto: " + CryptoJS.AES.encrypt(d.toString().trim(), encryptionKey))
