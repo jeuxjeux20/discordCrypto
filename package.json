@@ -1,0 +1,25 @@
+{
+  "name": "discordcrypto",
+  "version": "1.1.0",
+  "description": "discord but with encryption and stuff",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "crypto-js": "^3.1.9-1",
+    "discordie": "^0.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FireC123/discordCrypto.git"
+  },
+  "author": "FireC, Cth103",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/FireC123/discordCrypto/issues"
+  },
+  "homepage": "https://github.com/FireC123/discordCrypto#readme"
+}
