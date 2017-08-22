@@ -36,9 +36,8 @@ token = config.client.token;
 yourid = config.client.myid;
 console.log("key: "+encryptionKey);
 console.log("person id: "+personid);
-console.log("token: "+token);
 console.log("your id: "+yourid);
-console.log("Connecting...");
+console.log("\nConnecting...");
 client.connect({ //connect
     token: token
 });
@@ -49,12 +48,12 @@ client.Dispatcher.on("GATEWAY_READY", a => {
 try {
     client.Dispatcher.on("MESSAGE_CREATE", e => {
         if (e.message.author.id == personid || e.message.author.id == yourid) {
-            console.log(colors.green(e.message.author.username) + colors.yellow(": ") + colors.cyan(e.message.content));
+            console.log(colors.green("<"+e.message.author.username+">")+ colors.cyan(e.message.content));
 
             if (e.message.content.startsWith("discCrypto: ")) {
                 var bytes = CryptoJS.AES.decrypt(e.message.content.slice(12).toString(), encryptionKey);
                 var plaintext = bytes.toString(CryptoJS.enc.Utf8);
-                console.log(colors.green( "<") + colors.green(e.message.author.username) + colors.green("> ") + colors.cyan(plaintext));
+                console.log(colors.green( "<") + colors.green(e.message.author.username) + colors.green("> ") + colors.cyan(plaintext) +colors.magenta(" (DECRYPTED)"));
             }
         }
     });
