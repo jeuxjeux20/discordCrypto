@@ -34,6 +34,10 @@ encryptionKey = config.crypt.key;
 personid = config.client.destid;
 token = config.client.token;
 yourid = config.client.myid;
+console.log("key: "+encryptionKey);
+console.log("person id: "+personid);
+console.log("token: "+token);
+console.log("your id: "+yourid);
 console.log("Connecting...");
 client.connect({ //connect
     token: token
