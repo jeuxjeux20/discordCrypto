@@ -45,12 +45,6 @@ rl.question("Enter the person's id. (NOT USERNAME#0000) ", function(azze) {
   process.stdin.destroy();
 });
 rl = readline.createInterface(process.stdin, process.stdout);
-rl.question("Enter the person's id. (NOT USERNAME#0000) ", function(azze) {
-  personid = azze;
-  rl.close();
-  process.stdin.destroy();
-});
-rl = readline.createInterface(process.stdin, process.stdout);
 rl.question("Enter the encryption key (both persons uses the same encryption key) ", function(lala) {
   encryptionKey = lala;
   rl.close();
