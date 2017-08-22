@@ -2,6 +2,11 @@ var stdin = process.openStdin();
 var Discordie = require("discordie");
 var colors = require("colors/safe");
 var CryptoJS = require("crypto-js");
+var fs = require('fs')
+var ini = require('ini')
+
+var config;
+
 colors.setTheme({
     info: "cyan",
     ok: "green",
@@ -23,29 +28,19 @@ var yourid = "Your id goes here";
 var token = "Token goes here";
 var personid = "Id of your friend goes here";
 var encryptionKey = "Encryption key (the person that you will use this with has to use the same encryption key as you)";
-console.log("All the data is sent to discord's servers, you're safe.");
-console.log("Enter your id. (NOT USERNAME#0000) ")
-stdin.addListener("data", function (d) {
-       yourid = d.toString().trim();
-});
-console.log("Enter your token. ")
-stdin.addListener("data", function (d) {
-       token = d.toString().trim();
-});
-console.log("Enter the person's id. (NOT USERNAME#0000) ")
-stdin.addListener("data", function (d) {
-       personid = d.toString().trim();
-});
-console.log("Enter the encryption key (both persons uses the same encryption key) ")
-stdin.addListener("data", function (d) {
-       encryptionKey = d.toString().trim();
-});
+console.log("Getting settings.ini");
+config = ini.parse(fs.readFileSync('./settings.ini', 'utf-8'))
+encryptionKey = config.crypt.key;
+personid = config.client.destid;
+token = config.client.token;
+yourid = config.client.myid;
 console.log("Connecting...");
 client.connect({ //connect
     token: token
 });
 client.Dispatcher.on("GATEWAY_READY", a => {
     console.log("Hello, " + client.User.username + " to the world of CRYPTED MESSAGING!");
+    console.log("Taking you to the other line");
 });
 try {
     client.Dispatcher.on("MESSAGE_CREATE", e => {
