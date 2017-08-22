@@ -6,11 +6,7 @@ FireC, Cth103
 # Donate
 If you like this project and would like to donate to support us! 
 
-[Bitcoin](bitcoin:3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL?amount=0.01&label=Donation&message=Here,%20a%20donation) 
-
 Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL 
-
-[Dogecoin](dogecoin:ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn?amount=1000.00&label=Donation&message=Here,%20a%20donation)
 
 Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn
 
