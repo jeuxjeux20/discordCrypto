@@ -63,7 +63,6 @@ try {
             } else {
                 console.log(colors.green(e.message.author.username) + colors.yellow(": ") + colors.cyan(e.message.content));
             }
-        }
     });
     stdin.addListener("data", function (d) {
 
