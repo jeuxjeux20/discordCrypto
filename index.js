@@ -4,7 +4,8 @@ var colors = require("colors/safe");
 var CryptoJS = require("crypto-js");
 var fs = require('fs')
 var ini = require('ini')
-
+var sleep = require('sleep');
+//lol i needed a module for that
 var config;
 
 colors.setTheme({
@@ -18,8 +19,12 @@ var client = new Discordie();
 
 console.log("Discord Crypto");
 console.log("by FireC and cth103");
-console.log("If you like this project and would like to donate\n" + colors.yellow(
-    "Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL\nDogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn"));
+console.log("Hi, sorry for interrupting but\n");
+console.log("If you like this project and would like to donate\n Here, " + colors.yellow(
+    "Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL\nOr Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn"));
+console.log("Even a penny could help!");
+console.log("Anyways, starting the program, sorry for interrupting.");
+sleep.sleep(3);
 var yourid = "Your id goes here";
 var token = "Token goes here";
 var personid = "Id of your friend goes here";
