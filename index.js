@@ -42,7 +42,7 @@ client.connect({ //connect
     token: token
 });
 client.Dispatcher.on("GATEWAY_READY", a => {
-    console.log("Hello, " + colors.green(client.User.username) + "and welcome to the world of "+colors.red("CRYPTED MESSAGING!"));
+    console.log("Hello, " + colors.green(client.User.username) + " and welcome to the world of "+colors.red("CRYPTED MESSAGING!"));
     console.log("Taking you to the other line");
 });
 try {
