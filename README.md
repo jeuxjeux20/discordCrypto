@@ -5,6 +5,7 @@ FireC, Cth103
 
 # Donate
 If you like this project and would like to donate
+
 Bitcoin adress:
 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL
 Dogecoin adress:
