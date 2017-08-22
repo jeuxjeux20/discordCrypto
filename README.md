@@ -21,6 +21,7 @@ http://i.imgur.com/0UES3XC.png
 
 # Setup
 Edit settings.ini
+![settings.ini](http://i.imgur.com/3MNh10n.gif)
 
 # How to run
 Run the application with this command 'node index.js'
