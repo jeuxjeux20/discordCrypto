@@ -1,3 +1,4 @@
+'use strict';
 var stdin = process.openStdin();
 var Discordie = require("discordie");
 var colors = require("colors/safe");
@@ -30,7 +31,11 @@ console.log("If you like this project and would like to donate\n Here, " + color
     "Bitcoin adress: 3BRRcuocUKpMZFVvbWRWWwzopqhUDh7vjL\nOr Dogecoin adress: ADE9yEvvvk4XaJ85NBQZtKFykkA4nPQdAn"));
 console.log("Even a penny could help!");
 console.log("Anyways, starting the program, sorry for interrupting.");
+//fuck man fuck
 sleep(2000);
+console.log('\x1Bc'); //oh man
+console.log("Discord Crypto");
+console.log("by FireC and cth103");
 var yourid = "Your id goes here";
 var token = "Token goes here";
 var personid = "Id of your friend goes here";
