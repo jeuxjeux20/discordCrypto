@@ -47,7 +47,7 @@ try {
         token: token
     });
     client.Dispatcher.on("GATEWAY_READY", a => {
-        console.log("Hello, " + client.User.username + " to the world of CRYPTED MESSAGING!");
+        console.log("Hello, " + client.User.username + " to the world of "+colors.red("CRYPTED MESSAGING!"));
         console.log("Taking you to the other line");
     });
     client.Dispatcher.on("MESSAGE_CREATE", e => {
