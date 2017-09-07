@@ -57,8 +57,7 @@ try {
                 
                 var bytes = CryptoJS.AES.decrypt(e.message.content.slice(12).toString(), encryptionKey);
                 var plaintext = bytes.toString(CryptoJS.enc.Utf8);
-                console.log(colors.green("<") + colors.green(e.message.author.username) + colors.green("> ") + colors.cyan(plaintext) + colors.magenta(
-                    " (DECRYPTED)"));   
+                console.log(colors.green("<") + colors.green(e.message.author.username) + colors.green("> ") + colors.cyan(plaintext));   
                 } else {
                 console.log(colors.green(e.message.author.username) + colors.yellow(": ") + colors.cyan(e.message.content));
             }
