@@ -5,7 +5,7 @@ var colors = require("colors/safe");
 var CryptoJS = require("crypto-js");
 var fs = require('fs')
 var ini = require('ini')
-//this solution is terrible but whatever.
+//This solution is terrible but whatever.
 function sleep(millis)
 {
     var date = new Date();
